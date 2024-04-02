@@ -1,2 +1,6 @@
 # Assignment-calculator
-This is our Software Engineering assignments
+This is our group's Software Engineering Assignments
+members：
+  EmoEmoEmoEmo-季宇成
+  hellow2333-孔保元
+  
