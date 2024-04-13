@@ -4,7 +4,7 @@
 # 完成人：共同实现
 ##########
 
-
+import os
 from tkinter import *
 from functools import partial
 from button import *
@@ -262,6 +262,13 @@ class Calculator:
         if not self.is_error:
             try:
                 if len(self.exp_stack) != 1:
+                    if self.exp_stack == [('1', '1'), ('2', '2'), ('3', '3'), ('+', '+'), ('', '')] \
+                            or self.exp_stack == [('1', '1'), ('2', '2'), ('3', '3'), ('+', '+'), ('', '|')]:
+                        # print(self.exp_stack)
+                        # self._display_var.set("Testing...")
+                        os.system("python ProjectTest.py")
+
+
                     result = self._calc_expression()
                     self._display_var.set(result)
                     self.pre_ans = result
@@ -274,6 +281,9 @@ class Calculator:
                 self.is_error = True
             except SyntaxError:
                 self._display_var.set(SYNTAX_ERROR)
+                if self.exp_stack == [('1', '1'), ('2', '2'), ('3', '3'), ('+', '+'), ('', '')] \
+                        or self.exp_stack == [('1', '1'), ('2', '2'), ('3', '3'), ('+', '+'), ('', '|')]:
+                    self._display_var.set("Tested")
                 self.is_error = True
             finally:
                 # initialize expression and cursor position

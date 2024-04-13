@@ -16,7 +16,7 @@ def test_sin(x):
     custom_sin_value = sin(x)
     # 计算两者之间的误差
     err = abs(math_sin_value - custom_sin_value)
-    print('两者误差为err=', err)
+    print('sin功能两者误差(值)为err=', err)
     print('Python中math.sin(%d)=%f' % (x, math_sin_value))
     print('自己实现的sin(%d)=%f' % (x, custom_sin_value))
 
@@ -26,7 +26,7 @@ def test_cos(x):
     custom_cos_value = cos(x)
     # 计算两者之间的误差
     err = abs(math_cos_value - custom_cos_value)
-    print('两者误差为err=', err)
+    print('cos功能两者误差(值)为err=', err)
     print('Python中math.cos(%d)=%f' % (x, math_cos_value))
     print('自己实现的cos(%d)=%f' % (x, custom_cos_value))
 
@@ -36,7 +36,7 @@ def test_arcsin(x):
     custom_asin_value = asin(x)
     # 计算两者之间的误差
     err = abs(math_asin_value - custom_asin_value)
-    print('两者误差为err=', err)
+    print('arcsin功能两者误差(值)为err=', err)
     print('Python中math.asin(%d)=%f' % (x, math_asin_value))
     print('自己实现的asin(%d)=%f' % (x, custom_asin_value))
 
@@ -46,35 +46,53 @@ def test_arctan(x):
     custom_atan_value = atan(x)
     # 计算两者之间的误差
     err = abs(math_atan_value - custom_atan_value)
-    print('两者误差为err=', err)
+    print('arctan功能两者误差(值)为err=', err)
     print('Python中math.atan(%d)=%f' % (x, math_atan_value))
     print('自己实现的atan(%d)=%f' % (x, custom_atan_value))
 
 if __name__ == '__main__':
-    while True:
-        x=input("请输入测试函数(如格式：sin、cos、arcsin、arctan）:")
-        if x=='sin':
-            y=float(input("请按要求输入数字："))
-            test_sin(y)
-            z=input("continue?(y/n):")
-            if z=='n'or z=='N':  # 即使条件是 z == 'n' or 'N'，它也会被解释为真
-                break
-        elif x=='cos':
-            y=float(input("请按要求输入数字："))
-            test_cos(y)
-            z=input("continue?(y/n):")
-            if z=='n'or z=='N':
-                break
-        elif x=='arcsin':
-            y=float(input("请按要求输入数字："))
-            test_arcsin(y)
-            z=input("continue?(y/n):")
-            if z=='n'or z=='N':
-                break
+    print("测试30°的sin和cos值：")
+    test_sin(30)
+    test_cos(30)
+    print("\n测试45°的sin和cos值：")
+    test_sin(45)
+    test_cos(45)
 
-        elif x=='arctan':
-            y = float(input("请按要求输入数字："))
-            test_arctan(y)
-            z = input("continue?(y/n):")
-            if z == 'n' or z == 'N':
-                break
+    print("\n测试0.5的arcsin")
+    test_arcsin(0.5)
+
+    print("\n测试0.75的arcsin")
+    test_arcsin(0.75)
+
+    print("\n测试1的arctan值：")
+    test_arctan(1)
+
+    print("\n测试5的arctan值：")
+    test_arctan(5)
+    # while True:
+    #     x=input("请输入测试函数(如格式：sin、cos、arcsin、arctan）:")
+    #     if x=='sin':
+    #         y=float(input("请按要求输入数字："))
+    #         test_sin(y)
+    #         z=input("continue?(y/n):")
+    #         if z=='n'or z=='N':  # 即使条件是 z == 'n' or 'N'，它也会被解释为真
+    #             break
+    #     elif x=='cos':
+    #         y=float(input("请按要求输入数字："))
+    #         test_cos(y)
+    #         z=input("continue?(y/n):")
+    #         if z=='n'or z=='N':
+    #             break
+    #     elif x=='arcsin':
+    #         y=float(input("请按要求输入数字："))
+    #         test_arcsin(y)
+    #         z=input("continue?(y/n):")
+    #         if z=='n'or z=='N':
+    #             break
+    #
+    #     elif x=='arctan':
+    #         y = float(input("请按要求输入数字："))
+    #         test_arctan(y)
+    #         z = input("continue?(y/n):")
+    #         if z == 'n' or z == 'N':
+    #             break
