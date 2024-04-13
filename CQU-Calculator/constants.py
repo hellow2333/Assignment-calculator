@@ -80,6 +80,7 @@ R_CEIL = "⌉"
 R_FLOOR = "⌋"
 L_FLOOR = "⌊"
 # Special keys:
+TEST = "TEST"
 AC = "AC"
 DEL = "DEL"
 ANS = "Ans"
